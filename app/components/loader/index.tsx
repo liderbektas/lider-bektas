@@ -61,7 +61,7 @@ export default function Loader({ onComplete }: LoaderProps) {
                 ease: "power2.out",
             }, '>+=0.1')
             .to(logoRef.current, {
-                y: 80,
+                y: 70,
                 duration: 0.6,
                 ease: "back.in(1.2)"
             })
@@ -72,15 +72,15 @@ export default function Loader({ onComplete }: LoaderProps) {
                 ease: "power1.in"
             }, ">-0.25")
             .to([leftLineRef.current, rightLineRef.current], {
-                width: 0,
+                scaleX: 0,
                 duration: 0.4,
-                ease: "power2.inOut"
+                ease: "power2.inOut",
             }, "<")
             .to(lastSceneRef.current, {
                 opacity: 1,
                 duration: 1,
                 ease: "power2.inOut"
-            })
+            });
 
     }, [onComplete])
 
@@ -90,12 +90,12 @@ export default function Loader({ onComplete }: LoaderProps) {
             <div ref={hiddenContentRef} className="absolute inset-0 z-0 flex flex-col items-center justify-center opacity-0 text-white">
                 <div className="mt-40 flex">
                     <div className="flex justify-end w-[clamp(8rem,20vw,15rem)]">
-                        <div ref={leftLineRef} className="h-[0.5px] bg-homeLoader relative w-0">
+                        <div ref={leftLineRef} className="h-[0.5px] bg-homeLoader relative w-0 origin-right">
                             <div ref={leftLineFillRef} className="absolute right-0 top-0 h-full w-0 bg-linear-to-l from-white via-white/80 to-transparent" />
                         </div>
                     </div>
                     <div className="flex justify-start w-[clamp(8rem,20vw,15rem)]">
-                        <div ref={rightLineRef} className="h-[0.5px] bg-homeLoader relative w-0">
+                        <div ref={rightLineRef} className="h-[0.5px] bg-homeLoader relative w-0 origin-left">
                             <div ref={rightLineFillRef} className="absolute left-0 top-0 h-full w-0 bg-linear-to-r from-white via-white/80 to-transparent" />
                         </div>
                     </div>

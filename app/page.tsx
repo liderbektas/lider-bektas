@@ -59,22 +59,22 @@ export default function Home() {
         <div className="flex h-screen items-center justify-center bg-primary w-full">
           <div ref={mainRef} className="relative z-10 pointer-events-none mix-blend-difference text-white text-center flex flex-col items-center px-4">
             <h1 className="leading-[0.9] tracking-tight font-light">
-              <span className="vintage-name italic font-normal text-[clamp(3rem,12vw,6rem)]">
+              <span className="vintage-name italic font-normal text-[clamp(3rem,10vw,5rem)]">
                 Lider
               </span>
               <br />
-              <span className="vintage-title tracking-[0.2em] text-[clamp(2.5rem,10vw,5rem)]">
+              <span className="vintage-title text-[clamp(2.5rem,9vw,5rem)]">
                 BEKTAŞ
               </span>
             </h1>
-            <div className="w-[60%] h-px bg-white my-[clamp(1rem,4vw,1.5rem)] opacity-40"></div>
+            <div className="w-[60%] h-px bg-white my-[clamp(1rem,4vw,1.7rem)] opacity-40"></div>
             <p className="vintage-elegant text-[clamp(0.7rem,2.2vw,1.2rem)] tracking-[0.3em] opacity-80">
               CREATIVE DEVELOPER
             </p>
             <p className="vintage-name italic text-[clamp(0.6rem,2vw,1rem)] mt-[clamp(0.5rem,2vw,0.75rem)] tracking-wide opacity-60">
               Istanbul, Turkey
             </p>
-            <p className="vintage-title text-[clamp(0.5rem,1.5vw,0.875rem)] mt-[clamp(1.5rem,5vw,2rem)] tracking-[0.4em] opacity-50">
+            <p className="vintage-title text-[clamp(0.8rem,1.7vw,0.875rem)] mt-[clamp(1.5rem,5vw,2rem)] tracking-[0.4em] opacity-50">
               © 2025
             </p>
           </div>

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import "tailwindcss";
+
+@plugin "tailwind-clamp" {
+  minSize: 25rem;
+  maxSize: 80rem;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #141214;
+  --homeLoader: #232323;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-homeLoader: var(--homeLoader);
+  --color-primary: var(--primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-playfair: 'Playfair Display', serif;
+  --font-baskerville: 'Libre Baskerville', serif;
+  --font-cinzel: 'Cinzel Decorative', serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.vintage-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.vintage-title {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.vintage-decorative {
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+}
+
+.vintage-elegant {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.font-bodoni {
+  font-family: 'Bodoni Moda', serif;
+}

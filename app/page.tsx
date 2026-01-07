@@ -1,12 +1,14 @@
 'use client'
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Loader from "./components/loader";
+import Loader from "../components/loader";
 import { useEffect, useRef, useState } from "react";
+import { useLoader } from "@/context/loader";
 
 export default function Home() {
   const mainRef = useRef<HTMLDivElement>(null);
-  const [loaderFinished, setLoaderFinished] = useState(false);
+  const { loaderFinished, setLoaderFinished } = useLoader();
   const [windowsWidth, setWindowsWidth] = useState(0);
 
   useGSAP(() => {

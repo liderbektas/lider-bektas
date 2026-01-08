@@ -61,7 +61,7 @@ export default function Loader({ onComplete }: LoaderProps) {
                 ease: "power2.out",
             }, '>+=0.1')
             .to(logoRef.current, {
-                y: 70,
+                y: 67,
                 duration: 0.6,
                 ease: "back.in(1.2)"
             })
@@ -74,7 +74,7 @@ export default function Loader({ onComplete }: LoaderProps) {
             .to([leftLineRef.current, rightLineRef.current], {
                 scaleX: 0,
                 duration: 0.4,
-                ease: "power2.inOut",
+                ease: "power1.inOut"
             }, "<")
             .to(lastSceneRef.current, {
                 opacity: 1,
